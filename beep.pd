@@ -1,0 +1,42 @@
+#N canvas 856 62 313 294 10;
+#X obj 84 17 loadbang;
+#X obj 84 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 93 50 r start;
+#X msg 16 64 \; pd dsp 1;
+#X obj 86 160 osc~ 1000;
+#X obj 169 108 pipe 100;
+#X obj 160 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 160 83 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 160 158 sig~;
+#X obj 146 213 *~;
+#X obj 85 107 random 500;
+#X obj 161 185 lop~ 10;
+#X obj 86 133 + 1000;
+#X obj 160 54 inlet;
+#X obj 146 242 outlet~;
+#X obj 207 242 outlet;
+#X text 151 25 Vocalise;
+#X text 211 26 Duration;
+#X obj 214 54 inlet;
+#X floatatom 214 80 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 0 0 3 0;
+#X connect 1 0 10 0;
+#X connect 2 0 1 0;
+#X connect 4 0 9 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 0 15 0;
+#X connect 7 0 6 0;
+#X connect 7 0 5 0;
+#X connect 8 0 11 0;
+#X connect 9 0 14 0;
+#X connect 10 0 12 0;
+#X connect 11 0 9 1;
+#X connect 12 0 4 0;
+#X connect 13 0 7 0;
+#X connect 18 0 19 0;
+#X connect 19 0 5 1;
